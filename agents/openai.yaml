@@ -1,0 +1,6 @@
+interface:
+  display_name: "Cappy 小键帽配图"
+  short_description: "为中文文章设计并绘制 Cappy 小键帽手绘插画，支持配图策略与局部改图"
+  default_prompt: "Use $cappy-visual 为这篇中文文章设计并生成几张 Cappy 小键帽正文配图。"
+policy:
+  allow_implicit_invocation: true
