@@ -22,15 +22,30 @@
 
 ### 安装
 
-把仓库直接克隆到 Skills 目录，目录名使用 `cappy-visual`：
+推荐使用 [官方 Skills CLI](https://github.com/vercel-labs/skills)，需要本机已安装 Node.js 22.20.0 或更新版本（含 npm / npx）和 Git。将 `cappy-visual` 全局安装到 Codex：
 
 ```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-git clone https://github.com/LeeHongji/Cappy-visual.git \
-  "${CODEX_HOME:-$HOME/.codex}/skills/cappy-visual"
+npx skills@latest add LeeHongji/Cappy-visual --skill cappy-visual --agent codex --global --yes
 ```
 
-仓库根目录就是技能目录，入口是 [SKILL.md](SKILL.md)。如果已有同名目录，先保留旧版本，再选择更新方式；上面的首次安装命令不会覆盖已有目录。
+`--skill` 指定技能名，`--agent codex` 指定 Codex，`--global` 让技能在所有项目中可用，`--yes` 跳过交互确认。该 CLI 的 Codex 全局目录是 `~/.agents/skills/cappy-visual/`，会一并安装角色原稿、参考文档与 `agents/openai.yaml`。已有同名技能时，先备份自己的修改再重新安装。
+
+安装前可以查看仓库中可发现的技能，安装后可以核验全局列表：
+
+```bash
+npx skills@latest add LeeHongji/Cappy-visual --list
+npx skills@latest list --global --agent codex
+```
+
+列表应包含 `cappy-visual`。根据 [OpenAI 的技能文档](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)，Codex 会读取 `~/.agents/skills/` 并自动发现新技能；安装后在下一轮对话中使用 `$cappy-visual`，若未出现则重启 Codex。
+
+只安装到当前项目时，去掉 `--global`：
+
+```bash
+npx skills@latest add LeeHongji/Cappy-visual --skill cappy-visual --agent codex --yes
+```
+
+仓库根目录就是技能目录，入口是 [SKILL.md](SKILL.md)，其中的 `name: cappy-visual` 与 `description` 已满足 CLI 的发现规则。无需发布 npm 包或增加安装清单；CLI 支持直接从 GitHub 仓库安装。
 
 ### 生成第一张图
 
@@ -93,6 +108,8 @@ Cappy 是一枚会做事的小键帽：认真、有一点冷幽默，也保留�
 | 小漫画分镜 | 尝试、反馈、调整 | [尝试拼装、看反馈、再调整](assets/examples/08-listen-and-adjust.png) |
 
 ![Cappy 为目标方法工具三层架子准备补上缺失的支腿](assets/examples/06-fit-the-foundation.png)
+
+上图为旧版构图样例，持物手协调性已列为待修，不能作为手形参考。手形以角色原稿为准，详见 [手部复核与规则修订](docs/validation.md#2026-10-09手部协调性修订)。
 
 ## 怎么用
 
