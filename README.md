@@ -14,7 +14,7 @@
 
 ![三个 Cappy 从托着一盘任务，到放下多余负担，再到带着一件任务开始行动](assets/examples/04-put-down-the-load.png)
 
-这是一张实际生成的配图。仓库有 [8 张不同构图的完整样例](docs/gallery.md)，均以 Cappy 原稿为身份依据。新文章会重新设计隐喻，并在出图后逐角色检查手脚、持物接触和遮挡关系。
+这是一张实际生成的配图。仓库有 [更多构图样例](docs/gallery.md)，均以 Cappy 原稿为身份依据。新文章会重新设计隐喻，并在出图后逐角色检查手脚、持物接触和遮挡关系。
 
 ## 快速开始
 
@@ -96,20 +96,18 @@ Cappy 是一枚会做事的小键帽：认真、有一点冷幽默，也保留�
 
 同一套画风可以表达不同内容，不必每次都画成流程图。
 
-| 构图 | 适合表达 | 实际样例 |
+| 构图 | 适合表达 | 样例与说明 |
 | --- | --- | --- |
 | 流程 | 输入、处理、输出 | [剪掉任务分支](assets/examples/01-prune-the-task.png) |
 | 系统局部 | 判断、过滤、反馈 | [把反馈送回判断](assets/examples/02-open-the-feedback-hatch.png) |
 | 前后对比 | 散乱到有序 | [收绕散乱线索](assets/examples/03-wind-up-the-loose-ends.png) |
 | 角色状态 | 负重、减负、行动 | [放下多余负担](assets/examples/04-put-down-the-load.png) |
 | 概念隐喻 | 抽象观点与关系 | [称一称判断的分量](assets/examples/05-weigh-the-judgment.png) |
-| 方法分层 | 目标、方法、工具 | [先稳底座](assets/examples/06-fit-the-foundation.png) |
+| 方法分层 | 目标、方法、工具 | [构图说明](references/composition-patterns.md) |
 | 地图路线 | 想法到试跑、上线 | [铺好下一步](assets/examples/07-lay-the-next-step.png) |
 | 小漫画分镜 | 尝试、反馈、调整 | [尝试拼装、看反馈、再调整](assets/examples/08-listen-and-adjust.png) |
 
-![Cappy 为目标方法工具三层架子准备补上缺失的支腿](assets/examples/06-fit-the-foundation.png)
-
-上图为旧版构图样例，持物手协调性已列为待修，不能作为手形参考。手形以角色原稿为准，详见 [手部复核与规则修订](docs/validation.md#2026-10-09手部协调性修订)。
+![Cappy 双手搬起下一步踏脚石，在想法、试跑与上线之间铺路](assets/examples/07-lay-the-next-step.png)
 
 ## 怎么用
 
@@ -185,7 +183,7 @@ Use $cappy-visual 把这张图的红色标注“多余”改为“无关”。
 ├── references/               角色、画风、构图、提示词与 QA
 ├── assets/
 │   ├── reference/            Cappy 原始角色设定
-│   ├── examples/             8 张实际生成的插画
+│   ├── examples/             实际生成的正文插画
 │   └── readme/               imagegen 生成的 PNG 封面
 ├── docs/                     插画画廊与验证记录
 ├── LICENSE
